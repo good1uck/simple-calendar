@@ -50,7 +50,6 @@ defaultEvents('2020-03-03', "MY LADY'S BIRTHDAY",'A lot of money to spent!!!!','
 todayBtn.on("click", function() {
   console.log('today btn clicked')
   if (month <= indexMonth) {
-    // var step = indexMonth % month;
     var step = indexMonth - month;
     movePrev(step, true);
     console.log('if')
