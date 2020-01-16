@@ -49,27 +49,27 @@ defaultEvents('2020-03-03', "MY LADY'S BIRTHDAY",'A lot of money to spent!!!!','
 
 //button of the current day
 todayBtn.on("click", function() {
-  console.log('today btn clicked')
+   
   if (month <= indexMonth) {
     var step = indexMonth - month;
     movePrev(step, true);
-    console.log('if')
+     
   } else if (month > indexMonth) {
     var step = month - indexMonth;
     moveNext(step, true);
-    console.log('else')
+     
   }
 });
 
 //higlight the cel of current day
 dataCel.each(function() {
   if ($(this).data("day") == today) {
-    console.log('找到了今天')
+     
     $(this).addClass("isToday");
     fillEventSidebar($(this));
   }
-  console.log('没找到今天',)
-  console.log($(this).data("day"),today,$(this).data("day")==today)
+   
+   
 });
 
 //window event creator
@@ -175,7 +175,7 @@ dataCel.on("click", function() {
   var thisMonth = $(this)
   .attr("data-day")
   .slice(5, 7);
-  console.log(thisDay,thisMonth)
+   
 
   fillEventSidebar($(this));
 
@@ -189,7 +189,7 @@ dataCel.on("click", function() {
 
 //function for move the months
 function moveNext(fakeClick, indexNext) {
-  console.log('move next function')
+   
   for (var i = 0; i < fakeClick; i++) {
     $(".c-main").css({
       left: "-=100%"
@@ -205,7 +205,7 @@ function moveNext(fakeClick, indexNext) {
   }
 }
 function movePrev(fakeClick, indexPrev) {
-  console.log('move prev function')
+   
   for (var i = 0; i < fakeClick; i++) {
     $(".c-main").css({
       left: "+=100%"
