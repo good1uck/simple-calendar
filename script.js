@@ -62,10 +62,13 @@ todayBtn.on("click", function() {
 
 //higlight the cel of current day
 dataCel.each(function() {
-  if ($(this).data("day") === today) {
+  if ($(this).data("day") == today) {
+    console.log('找到了今天')
     $(this).addClass("isToday");
     fillEventSidebar($(this));
   }
+  console.log('没找到今天',)
+  console.log($(this).data("day"),today,$(this).data("day")==today)
 });
 
 //window event creator
@@ -171,6 +174,7 @@ dataCel.on("click", function() {
   var thisMonth = $(this)
   .attr("data-day")
   .slice(5, 7);
+  console.log(thisDay,thisMonth)
 
   fillEventSidebar($(this));
 
