@@ -26,7 +26,8 @@ var saveBtn = $(".js-event__save");
 var closeBtn = $(".js-event__close");
 var winCreator = $(".js-event__creator");
 var inputDate = $(this).data();
-today = year + "-" + month + "-" + day;
+
+today = dateObj.Format('yyyy-MM-dd')
 
 
 // ------ set default events -------
